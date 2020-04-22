@@ -7,9 +7,9 @@ def checkCollatz(n):
     return True
   while n != 1:
     if n % 2 == 0:
-       checkCollatz(n/2)
+       n = n/2
     else:
-      checkCollatz(3*n + 1)
+      n = 3*n + 1
 
 """
 Prints every number from 1 to x that reaches 1 using the process defined here:
@@ -24,4 +24,4 @@ def printValidCollatz(x):
       print("Failure")
     i += 1
 
-printValidCollatz(1000000)
+printValidCollatz(10000)
